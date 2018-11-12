@@ -123,9 +123,10 @@ function endGame(){
   ROCKS.forEach(function(rock){
     rock.remove()
   })
-  ROCKS = []
+  //ROCKS = []
   window.removeEventListener('keydown', moveDodger)
   alert('YOU LOSE!')
+  START.style.display = ''
 }
 
 function moveDodger(e) {
