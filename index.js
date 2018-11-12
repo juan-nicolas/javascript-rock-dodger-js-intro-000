@@ -121,9 +121,8 @@ function endGame(){
   // debugger;
   clearInterval(gameInterval)
   ROCKS.forEach(function(rock){
-    rock.remove()
+    ROCKS.pop()
   })
-  //ROCKS = []
   window.removeEventListener('keydown', moveDodger)
   alert('YOU LOSE!')
   START.style.display = ''
