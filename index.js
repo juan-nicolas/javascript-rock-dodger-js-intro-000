@@ -82,7 +82,7 @@ function createRock(x) {
      * we should call endGame()
      */
      if (checkCollision(rock) === true){
-       endGame()
+       return endGame()
      }
     /**
      * Otherwise, if the rock hasn't reached the bottom of
@@ -121,7 +121,7 @@ function endGame(){
   // debugger;
   clearInterval(gameInterval)
   ROCKS.forEach(function(rock){
-    ROCKS.pop()
+    rock.remove()
   })
   window.removeEventListener('keydown', moveDodger)
   alert('YOU LOSE!')
